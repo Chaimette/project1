@@ -22,6 +22,11 @@ body
   background-repeat:no-repeat;
 }
 
+a{
+  color:var(--text-nav);
+  text-decoration:none;
+  font-style: normal;
+}
 .Logo
 {
   width:7rem;
@@ -34,6 +39,7 @@ nav
   color: var(--text-nav);
   display: flex;  
   justify-content: space-between;
+  align-items: center;
 }
 menu>li{
   opacity: 0;
@@ -47,7 +53,7 @@ menu>li{
   scroll-snap-align: center;
 }
 
-a{
+.box>a{
   position: absolute;
   top: 0;
   margin-top: 25%;
@@ -81,7 +87,6 @@ a{
 .box >video{
   border:1px solid red;
   width:100%;
-  aspec
 }
 .box
 {
