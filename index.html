@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" />
+    <link href="css/style.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 <body>
-    <section>
-        <nav>
-        </nav>
+    <section class ="caroussel ">
+        <div class="box" id="slide1">1
+          <div class="carousel_snapper">
+           <a href="#slide4" class="previous_slide">Previous slide </a>
+           <a href="#slide2" class="next_slide">Next slide </a>
+          </div>
+        </div>
+        <div class="box" id="slide2">2
+          <div class="carousel_snapper">
+           <a href="#slide1" class="previous_slide">Previous slide </a>
+           <a href="#slide3" class="next_slide">Next slide </a>
+          </div>
+        </div> 
+        <div class="box" id="slide3">3
+          <div class="carousel_snapper">
+           <a href="#slide2" class="previous_slide">Previous slide </a>
+           <a href="#slide4" class="next_slide">Next slide </a>
+          </div>
+        </div> 
+        <div class="box" id="slide4">4
+          <div class="carousel_snapper">
+           <a href="#slide3" class="previous_slide">Previous slide </a>
+           <a href="#slide1" class="next_slide">Next slide </a>
+          </div>
+        </div>
+        <div class="box" id="slide5">1
+          <div class="carousel_snapper">
+           <a href="#slide4" class="previous_slide">Previous slide </a>
+           <a href="#slide2" class="next_slide">Next slide </a>
+          </div>
+        </div>  
+      <aside class="carousel__navigation">
+        <ol class="carousel__navigation-list">
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide1"
+               class="carousel__navigation-button">Go to slide 1</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide2"
+               class="carousel__navigation-button">Go to slide 2</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide3"
+               class="carousel__navigation-button">Go to slide 3</a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide4"
+               class="carousel__navigation-button">Go to slide 4</a>
+          </li>
+        </ol>
+      </aside>
     </section>
 </body>
 </html>
