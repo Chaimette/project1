@@ -34,6 +34,7 @@ nav
   display: flex;  
   justify-content: space-between;
   align-items: center;
+  margin-bottom:2rem;
 }
 menu>li{
   opacity: 0;
@@ -57,33 +58,37 @@ a{
 .searchBar
 {
   background-color: var(--navSearch);
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
 }
-.searchBar>input{
+.searchBar input{
   background-color: var(--navSearch);
   border:none;
   width:clamp(75ch, 200vh, 250px);
   padding:10px;
+  border-radius: 7px;
   color:var(--text);
 }
-.searchBar>input:focus{
+.searchBar input:focus{
   outline:none;
 }
-.searchBar>button{
+.searchBar button{
   background:none;
   border:none;
   outline: none;
   box-shadow: none;
-  background:var(--main-color);
+  background:var(--navSearch);
   font-size:2rem;
   color:var(--text);
+  border-radius: 7px;
 }
-.searchBar>button:active{
+.searchBar button:active{
   background:none;
   border:none;
   outline: none;
   box-shadow: none;
+  color:var(--bg-widgets);
 }
 .slider-wrapper
 {
@@ -113,7 +118,7 @@ a{
     width:7rem;
     border: none;
     outline:none;
-    background: red;
+    background: var(--text);
     cursor: pointer;
     opacity: 0.5;
     transform:translateY(-50%);
@@ -122,11 +127,11 @@ a{
 
 .slider-wrapper .slide-button .prev
 {
-    color:blue;
+    color:var(--bg-widgets);
 }
 .slider-wrapper .slide-button .next
 {
-    color:blue;
+    color:var(--bg-widgets);
 }
 .slider-wrapper .slide-button#left
 {
@@ -167,7 +172,7 @@ a{
     position: absolute;
     height : 100%;
     width: 50%;
-    background: #000;    
+    background: var(--bg-widgets);    
     border-radius: inherit;
     cursor: grab;
 }

@@ -46,10 +46,7 @@ document.addEventListener("DOMContentLoaded", function(e) {// do stuff
         slideButtons[0].style.display = itemList.scrollLeft <= 0 ? "none" : "flex";
         slideButtons[1].style.display = itemList.scrollLeft >= maxScrollLeft ? "none" : "flex";
     }
-    
     initSlider();
     window.addEventListener("resize", initSlider);
     window.addEventListener("load", initSlider);
 })
-
-
