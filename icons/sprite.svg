@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg width="30mm" height="30mm" viewBox="0 0 20 20" version="1.1"/>
+    <symbol id="prev" width="30mm" height="30mm" viewBox="0 0 30 30" >
+        <g transform="translate(-28.940314,-20.000001)">
+            <path
+                fill="currentColor"
+                d="M 28.940315,35.290323 58.940315,50 47.702413,35.290323 58.881602,20 28.940315,35.290323"/>        
+        </g>           
+    </symbol>
+    <symbol id="next"  width="30mm" height="30mm" viewBox="0 0 30 30">
+        <g transform="translate(-28.940314,-20.000001)">
+            <path fill="currentColor" d="M 58.940315,35.290323 28.940315,50 40.178217,35.290323 28.999028,20 58.940315,35.290323"/>
+        </g>
+    </symbol>
+</svg>

@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
     <title>Document</title>    
+    <script type="text/javascript" src="js/carousel.js"></script>
   </head>
 <body>
     <section>
@@ -23,60 +24,38 @@
               <button type="submit"><i class="fa fa-search"></i></button>
             </form>
             <a href="">Se Connecter</a>
-        </nav>
-        
+        </nav>        
     </section>
-    <section class ="caroussel ">
-        <div class="box" id="slide1"><video src="video/RickRolled.webm" autoplay="true" muted="true" type="video/webm"></video>
-          <div class="carousel_snapper">
-           <a href="#slide4" class="previous_slide">Previous slide </a>
-           <a href="#slide2" class="next_slide">Next slide </a>
+
+    <section class="carousel">
+      <div class="slider-wrapper">
+          <button class="slide-button" id="left">
+              <svg class="prev">
+                  <use xlink:href="assets/icons/sprite.svg#prev"/>
+              </svg>
+          </button>
+          <div class="item-list">
+              <img src="img/img-1.png" alt="img-1" class="image-item">
+              <img src="img/img-2.png" alt="img-2" class="image-item">                    
+              <img src="img/img-3.png" alt="img-3" class="image-item">
+              <img src="img/img-4.png" alt="img-4" class="image-item">
+              <img src="img/img-5.png" alt="img-5" class="image-item">
+              <img src="img/img-6.png" alt="img-6" class="image-item">                    
+              <img src="img/img-7.png" alt="img-7" class="image-item">
+              <img src="img/img-8.png" alt="img-8" class="image-item">
           </div>
-        </div>
-        <div class="box" id="slide2">2
-          <div class="carousel_snapper">
-           <a href="#slide1" class="previous_slide">Previous slide </a>
-           <a href="#slide3" class="next_slide">Next slide </a>
+          <button class="slide-button" id="right">
+              <svg class="next">
+                  <use xlink:href="assets/icons/sprite.svg#next"/>
+              </svg>
+          </button>
+      </div>
+      <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+              <div class="scrollbar-thumb">
+              </div>
           </div>
-        </div> 
-        <div class="box" id="slide3">3
-          <div class="carousel_snapper">
-           <a href="#slide2" class="previous_slide">Previous slide </a>
-           <a href="#slide4" class="next_slide">Next slide </a>
-          </div>
-        </div> 
-        <div class="box" id="slide4">4
-          <div class="carousel_snapper">
-           <a href="#slide3" class="previous_slide">Previous slide </a>
-           <a href="#slide1" class="next_slide">Next slide </a>
-          </div>
-        </div>
-        <div class="box" id="slide5">1
-          <div class="carousel_snapper">
-           <a href="#slide4" class="previous_slide">Previous slide </a>
-           <a href="#slide2" class="next_slide">Next slide </a>
-          </div>
-        </div>  
-      <aside class="carousel__navigation">
-        <ol class="carousel__navigation-list">
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide1"
-               class="carousel__navigation-button">Go to slide 1</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide2"
-               class="carousel__navigation-button">Go to slide 2</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide3"
-               class="carousel__navigation-button">Go to slide 3</a>
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide4"
-               class="carousel__navigation-button">Go to slide 4</a>
-          </li>
-        </ol>
-      </aside>
-    </section>
+      </div>
+  </section>
 </body>
 </html>
