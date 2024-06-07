@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="29.999992mm"
+   height="30.000004mm"
+   viewBox="0 0 29.999992 30.000004"
+   version="1.1"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+    <symbol id="prev" width="29.999992mm" height="30.000004mm" viewBox="0 0 29.999992 30.000004">
+    <g transform="translate(-90.089525,-133.5)">
+        <path fill="currentColor" d="M 90.089525,148.79032 120.08952,163.5 108.85162,148.79032 120.03081,133.5 90.089525,148.79032"/>
+    </g>
+    </symbol>
+    <symbol id="next" width="29.999992mm" height="30.000004mm" viewBox="0 0 29.999992 30.000004">
+     <g transform="translate(-90.089525,-133.5)">
+        <path fill="currentColor" d="M 120.08952,148.79032 90.089525,163.5 101.32743,148.79032 90.148238,133.5 120.08952,148.79032"/>
+     </g>
+   </symbol>
+</svg>
