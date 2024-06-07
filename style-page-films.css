@@ -1,0 +1,196 @@
+:root {
+    --primary-color: #FFC700;
+    --secondary-color: #4B0004;
+    --dark-color: black;
+
+}
+
+*{
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    margin: 3vw;
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.2;
+}   
+ 
+        /* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    margin: 10px;
+}
+.sub-title {
+    margin: 10px ;
+    
+}
+.poster {
+    height: 416px;
+    margin:0;
+    border-radius: 15px;
+}
+.in-summary {
+    display: flex;
+    /* background-color:#4b00046e; */
+   
+}
+
+            /* TRAILER */
+
+.trailer  {
+    display: flex;
+    justify-content: center;
+}
+iframe {
+  
+    border-radius: 15px;
+}
+
+        /* ACTORS */
+
+.actors-section {
+    width: 100%; 
+    padding: 0px;
+}
+
+.actors-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 2vw;
+    border-radius: 15px;
+    display: inline;
+}
+
+.actors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.actor {
+    display: flex;
+    align-items: center;
+    width: 31%; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.actor-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.actor-details {
+    flex-grow: 1;
+}
+
+.actor-details h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.actor-details p {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+
+        /* PICTURES */
+
+
+.spec-pictures {
+    text-align: left;
+    font-size: larger;
+    padding-left: 14px;
+
+}
+
+.spec-pictures h3 {
+    margin-bottom: 10px;
+}
+
+.spec-pictures ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.spec-pictures ul li {
+    margin-right: 0;
+    margin-left: 5px;
+    padding-left: 2vw;
+    margin-top: 10px;
+}
+
+.spec-pictures .pics {
+    display: block;
+}
+
+.pics {
+    margin:0;
+}
+
+            /* MA NOTE */
+
+
+label {
+    display: block;
+   font-size:x-large;
+  }
+  
+  input,
+  label {
+    margin: 0 55px;
+    height: 2rem;
+    
+  }
+  input {
+    background-color: #666;
+    border-radius: 5px;
+  }
+
+            /* REVIEWS */
+
+.user-reviews {
+    width: 100%;
+    text-align: left;
+}
+
+.user-reviews h3 {
+    margin-bottom: 20px;
+}
+
+.user-reviews{
+    width: 60%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+}
+
+.all-reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4%;
+}
+
+
+.reviews h4 {
+    margin: 0 0 10px 0;
+}
+
+.reviews p {
+    margin: 0;
+}
+
