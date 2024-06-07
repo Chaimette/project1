@@ -9,20 +9,22 @@
 {
     padding:0;
     margin:0;
+    width: 100%;
     box-sizing: border-box;
 } 
 
+main{
+    display:flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
 
 h1,h2,h3,.button{
     font-family: "Montserrat", sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-    scrollbar-color: transparent transparent;
-    scrollbar-width: 0px;
-    -ms-overflow-style: none;
-}
 .toggle-menu
 {
     display: flex;
@@ -34,6 +36,7 @@ h1,h2,h3,.button{
 {
     visibility:hidden;
 }
+
 .menu-wrapper
 {
     width: 100%;
@@ -41,6 +44,7 @@ h1,h2,h3,.button{
     flex-direction: row;
     justify-content: space-around;
 }
+
 nav
 {
   background-color: var(--main-color);
@@ -59,6 +63,7 @@ menu li a
 {
     text-decoration: none;
 }
+
 menu li:hover
 {
     text-decoration: none;
@@ -235,14 +240,17 @@ a{
 
 #news
 {    
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 #news h2{
     color: var(--text);
-    grid-column:  1 /-1;
+    padding:2rem;
 }
+
 .sheet-template
 {
     width:50ch;
@@ -250,13 +258,20 @@ a{
     background:#C3C3C3;
     border-radius: 20px;;
 }
+.sheets
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 #hall
 {
+    padding:5rem;
     color:var(--text);
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 80%;
+    width: 60%;
 }
 
 #hall .note{
@@ -266,10 +281,10 @@ a{
     justify-content: space-evenly;
 }
 
-#poster img
+#poster .item-list .item
 {
-    height:240px;
-    width:auto;
+    height:30vw;
+    aspect-ratio: 1;
 }
 
 @media screen and (width <= 768px) { 
@@ -278,8 +293,8 @@ a{
     }
     #news
     {    
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
     #news h2{
@@ -290,7 +305,7 @@ a{
     {
         width:90vw;
         padding:2rem;
-        background:var(--text);
+        background:#C3C3C3;
         border-radius: 20px;;
     }
     .burger-menu
@@ -302,7 +317,7 @@ a{
         transform:translateX(-5rem);
         width: 100px;
         height:10px;
-        background:var(--navSearch);
+        background:#4B0004;
         border-radius: 8px;
         transition: 0.5s;
     } 
