@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(e) {// do stuff 
+document.addEventListener("DOMContentLoaded", function(e) {
     let itemList = document.querySelector(".slider-wrapper .item-list");
     let slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
     let sliderScrollbar = document.querySelector(".carousel .slider-scrollbar");
@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", function(e) {// do stuff
     {
         button.addEventListener("click", () => {
             const direction = button.id === "left" ? -1 : 1;
-            const scrollAmount = itemList.clientWidth * direction;            
+            const scrollAmount = (itemList.clientWidth)* direction;  
+            console.log(itemList.clientWidth);          
             itemList.scrollBy({ left: scrollAmount, behavior: "smooth" });
         });        
     }
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function(e) {// do stuff
         slideButtons[0].style.display = itemList.scrollLeft <= 0 ? "none" : "flex";
         slideButtons[1].style.display = itemList.scrollLeft >= maxScrollLeft ? "none" : "flex";
     }
+    console.log(itemList);
     initSlider();
     window.addEventListener("resize", initSlider);
     window.addEventListener("load", initSlider);
