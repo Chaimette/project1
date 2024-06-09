@@ -6,7 +6,6 @@
 }
 
 *{
-    background-color: var(--dark-color);
     color: var(--primary-color);
     margin: 3vw;
     list-style: none;
@@ -14,6 +13,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.2;
 }   
+
+body{
+    background-color: var(--dark-color);
+
+}
  
         /* HEADER */
 
@@ -176,21 +180,30 @@ label {
     box-sizing: border-box;
     margin-bottom: 20px;
     padding: 10px;
-    
+    /* background-color: #4B0004; */
 }
 
 .all-reviews {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4%;
+    /* background-color: #4B0004; */
 }
-
+.reviews {
+    background-color: #4B0004;
+    padding: 20px;
+    border-radius: 15px;
+}
 
 .reviews h4 {
     margin: 0 0 10px 0;
+    /* background-color: #4B0004; */
+
 }
 
 .reviews p {
     margin: 0;
+    /* background-color: #4B0004; */
+
 }
 
