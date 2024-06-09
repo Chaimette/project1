@@ -31,7 +31,7 @@ h1 {
 
 .headline {
     position: relative;
-    background-image: url('images/denzel-background.jpg');
+    background-image: url("img/articles/denzel-background.jpg");
     background-size: cover;
     background-position: center;
     padding: 40px;
