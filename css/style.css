@@ -30,6 +30,14 @@ main{
 h1,h2,h3,.button{
     font-family: "Montserrat", sans-serif;
 }
+nav
+{
+    position:fixed;
+}
+.carousel
+{
+    padding-top:150px;
+}
 .toggle-menu
 {
     display: flex;
@@ -39,8 +47,13 @@ h1,h2,h3,.button{
 }
 .toggle-btn
 {
+    width: 0px;
     visibility:hidden;
     z-index: 99;
+}
+.burger-menu
+{
+    width:20vw;
 }
 .menu-wrapper
 {
@@ -51,6 +64,7 @@ h1,h2,h3,.button{
 }
 nav
 {
+  z-index: 99;
   background-color: var(--main-color);
   color: var(--bg-widgets);
   display: flex;  
@@ -59,6 +73,7 @@ nav
   margin-bottom:2rem;
 }
 menu>li{
+    font-size: larger;
     visibility:hidden;    
     list-style: none;
 }
@@ -97,10 +112,14 @@ a{
   display: flex;
   border-radius: 7px;
   flex-direction: row;
-  align-items: center;
   background:var(--navSearch);
-  justify-content: center;
+  justify-content: space-between;
   height:3rem;
+  padding: 0.4rem;
+}
+.menu-wrapper h3
+{
+    padding-left:0.5rem;
 }
 .searchBar input{
   background-color: var(--navSearch);
