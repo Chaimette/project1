@@ -278,7 +278,17 @@ a{
 @media screen and (width <= 768px) { 
     nav{
         width:100%;
+        position:fixed;
+        z-index: 99;
+        flex-direction: column ;
     }
+    .Logo
+    {
+        position: fixed;
+        top:0px;
+        left:0px;
+    }
+
     #news
     {    
         display: flex;
@@ -317,9 +327,10 @@ a{
     }
     .burger-menu
     {   
+        top: 2rem;
         visibility: visible;
         display: block;
-        position: absolute;
+        position: fixed;
         right:0;
         transform:translateX(-5rem);
         width: 100px;
@@ -328,6 +339,10 @@ a{
         border-radius: 8px;
         transition: 0.5s;
     } 
+    main
+    {
+        padding-top: 250px;;
+    }
     .burger-menu::before
     {   
         position: relative;
@@ -349,20 +364,21 @@ a{
         height:10px;
         background:var(--bg-widgets);
         border-radius: 8px;
-    }
-    .menu-wrapper input:checked ~ .burger-menu:after{
+    }    
+
+    .toggle-btn:checked ~ .burger-menu:after{
         top: 0;
         transform: rotate(-405deg);
         width: 100px;
         transition: 0.5s;
     }
-    .menu-wrapper input:checked ~ .burger-menu:before{
+    .toggle-btn:checked ~ .burger-menu:before{
         top: 1vh;
         transform: rotate(405deg);
         width: 100px;
         transition: 0.5s;
     }
-    .menu-wrapper input:checked ~ .burger-menu{
+    .toggle-btn:checked ~ .burger-menu{
         background: transparent;
     }
     .menu-wrapper input:not(:checked) ~ .burger-menu:after{
@@ -372,20 +388,39 @@ a{
         transition: 0.5s;
     }
 
-    .menu-wrapper
+    .toggle-btn:checked ~.menu-wrapper 
     {        
+        visibility: visible;
+        display: flex;
         flex-direction: column-reverse;
+        width:100vw;
+        padding-top: 6rem;
+    }
+    .menu-wrapper menu li
+    {
+        align-items: center;
+        visibility: visible;
+        text-align: center;
+    }
+
+    .toggle-btn:checked ~.menu-wrapper menu li
+    {
+        padding: 0.5rem;
+        font-size: larger;
+        opacity: 1;        
+    }
+    .menu-wrapper
+    {
         visibility: hidden;
-        width:50vw;
     }
 
     .toggle-btn
     {
-        position: absolute;
-        top:2vw;
+        position: fixed;
+        top:3vw;
         right:-2vw;
-        width:120px;
-        height:120px;
+        width:100px;
+        height:100px;
         opacity: 0;
         visibility: visible;
         transform:translateX(-5rem);        
@@ -394,13 +429,7 @@ a{
     {
         visibility: hidden;   
     }
-    .menu-wrapper input:checked
-    {        
-        flex-direction: column-reverse;
-        visibility: visible;
-        width:50vw;
-        height:50vw;
-    }   
+
     .image-item{
         height: auto !important;
         width: 100vw !important;
