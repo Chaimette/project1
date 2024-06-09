@@ -40,6 +40,7 @@ h1,h2,h3,.button{
 .toggle-btn
 {
     visibility:hidden;
+    z-index: 99;
 }
 .menu-wrapper
 {
@@ -341,7 +342,7 @@ a{
     } 
     main
     {
-        padding-top: 250px;;
+        padding-top: 150px;;
     }
     .burger-menu::before
     {   
@@ -381,10 +382,10 @@ a{
     .toggle-btn:checked ~ .burger-menu{
         background: transparent;
     }
-    .menu-wrapper input:not(:checked) ~ .burger-menu:after{
+    .toggle-btn:not(:checked) ~ .burger-menu:after{
         transition: 0.5s;
     }
-    .menu-wrapper input:not(:checked) ~ .burger-menu:before{
+    .toggle-btn:not(:checked) ~ .burger-menu:before{
         transition: 0.5s;
     }
 
