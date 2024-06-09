@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style-page-films.css" />
+    <link rel="stylesheet" href="css/style-page-films.css" />
     <title>Projet 1</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="title-left">
         <h1 class="title">Fast and Furious</h1>
         <p class="sub-title">Titre original: The Fast and the Furious</p>
@@ -19,7 +19,7 @@
     </header>
 
     <section class="in-summary">
-      <img class="poster" src="image-chai/fandf1.jpg" alt="movie poster" />
+      <img class="poster" src="img/films/fandf1.jpg" alt="movie poster" />
 
       <div class="summary">
         <h3>Synopsis</h3>
@@ -124,9 +124,9 @@
       </div>
     </section>
     <section class="ratings">
-      <label for="rating"> Ma note:</label>
+      <label class="score" for="rating"> Ma note:</label>
 
-      <input
+      <input class="ratingsInput"
         type="float"
         id="rating"
         name="rating"

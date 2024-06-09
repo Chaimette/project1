@@ -4,7 +4,6 @@
     --text: #C3C3C3;
     --navSearch: #4B0004;
 }
-
 *
 {
     padding:0;
@@ -28,11 +27,9 @@ main{
     align-items: center;
     gap: 2rem;
 }
-
 h1,h2,h3,.button{
     font-family: "Montserrat", sans-serif;
 }
-
 .toggle-menu
 {
     display: flex;
@@ -44,7 +41,6 @@ h1,h2,h3,.button{
 {
     visibility:hidden;
 }
-
 .menu-wrapper
 {
     width: 100%;
@@ -52,7 +48,6 @@ h1,h2,h3,.button{
     flex-direction: row;
     justify-content: space-around;
 }
-
 nav
 {
   background-color: var(--main-color);
@@ -66,20 +61,16 @@ menu>li{
     visibility:hidden;    
     list-style: none;
 }
-
 menu li a
 {
     text-decoration: none;
 }
-
 menu li:hover
 {
     text-decoration: none;
     background:var(--text);
     color:var(--main-color);
 }
-
-
 .toggle-menu:hover menu>li
 {
     visibility: visible;
@@ -100,12 +91,13 @@ a{
     width:7rem;
     aspect-ratio:1;
 }
-
 .searchBar
 {
-  background-color: var(--navSearch);
+  display: flex;
   border-radius: 7px;
+  flex-direction: row;
   align-items: center;
+  background:var(--navSearch);
   justify-content: center;
   height:3rem;
 }
@@ -125,6 +117,7 @@ a{
   border:none;
   outline: none;
   box-shadow: none;
+  width: 2rem;
   background:var(--navSearch);
   font-size:2rem;
   color:var(--text);
@@ -154,13 +147,11 @@ a{
     scrollbar-width: none;
     grid-template-columns: repeat(8, 1fr);
 }
-
 .slider-wrapper .item-list .image-item
 {   
     width: 640px; 
     height:480px;    
 }
-
 .slider-wrapper .slide-button
 {
     position:absolute;
@@ -175,7 +166,6 @@ a{
     transform:translateY(-50%);
     color:white;
 }
-
 .slider-wrapper:hover .slide-button 
 {
    visibility: visible;
@@ -207,7 +197,6 @@ a{
     display:flex;
     align-items:center;
 }
-
 .slider-scrollbar .scrollbar-track{
     height : 4px;
     width: 100%;
@@ -215,7 +204,6 @@ a{
     border-radius: 4px;;   
     position: relative;
 }
-
 .slider-scrollbar:hover .scrollbar-track
 {
     height:6px;
@@ -226,7 +214,6 @@ a{
     height: 8px;
     top:-1px;
 }
-
 .slider-scrollbar .scrollbar-thumb{
     position: absolute;
     height : 100%;
@@ -235,7 +222,6 @@ a{
     border-radius: inherit;
     cursor: grab;
 }
-
 .slider-scrollbar .scrollbar-thumb::after
 {
     content:"";
@@ -245,7 +231,6 @@ a{
     top:-10px;
     bottom:-10px;
 }
-
 #news
 {    
     display: flex;
@@ -253,12 +238,10 @@ a{
     justify-content: center;
     align-items: center;
 }
-
 #news h2{
     color: var(--text);
     padding:2rem;
 }
-
 .sheet-template
 {
     width:50ch;
@@ -281,20 +264,17 @@ a{
     justify-content: space-evenly;
     width: 60%;
 }
-
 #hall .note{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-
 #poster .item-list .item
 {
     height:30vw;
     aspect-ratio: 1;
 }
-
 @media screen and (width <= 768px) { 
     nav{
         width:100%;
@@ -348,7 +328,6 @@ a{
         border-radius: 8px;
         transition: 0.5s;
     } 
-
     .burger-menu::before
     {   
         position: relative;
@@ -360,7 +339,6 @@ a{
         background:var(--bg-widgets);
         border-radius: 8px;
     }  
-
     .burger-menu::after
     {   
         position: relative;
@@ -372,7 +350,6 @@ a{
         background:var(--bg-widgets);
         border-radius: 8px;
     }
-
     .menu-wrapper input:checked ~ .burger-menu:after{
         top: 0;
         transform: rotate(-405deg);
@@ -417,22 +394,17 @@ a{
     {
         visibility: hidden;   
     }
-
-
     .menu-wrapper input:checked
     {        
         flex-direction: column-reverse;
         visibility: visible;
         width:50vw;
         height:50vw;
-    }
-
-    
+    }   
     .image-item{
         height: auto !important;
         width: 100vw !important;
     }
-
     .slider-wrapper .item-list
     {
         gap:0px;
@@ -469,9 +441,7 @@ a{
     {
         visibility: hidden;
     }
-
 }
-
 @media screen and(max-width:1300px) { 
     .slider-scrollbar
     {
