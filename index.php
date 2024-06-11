@@ -1,3 +1,39 @@
+
+<?php
+// caroussel : nomPoster => video
+ $caroussel = [
+    "img-1.png" => "RickRolled.webm",
+    "img-2.png" => "RickRolled.webm",
+    "img-3.png" => "RickRolled.webm",
+    "img-4.png" => "RickRolled.webm",
+    "img-5.png" => "RickRolled.webm",
+    "img-6.png" => "RickRolled.webm",
+    "img-7.png" => "RickRolled.webm",
+    "img-8.png" => "RickRolled.webm",
+    "img-9.png" => "RickRolled.webm",
+    "img-10.png" => "RickRolled.webm",
+ ];
+
+ $affiche =[
+    "testAffiche.jpeg",
+    "testAffiche2.jpeg",
+    "testAffiche.jpeg",
+    "testAffiche2.jpeg",
+    "testAffiche.jpeg",
+    "testAffiche2.jpeg",
+    "testAffiche.jpeg",
+    "testAffiche.jpeg",
+    "testAffiche2.jpeg",
+    "testAffiche2.jpeg",
+    "testAffiche.jpeg",
+    "testAffiche.jpeg",
+    "testAffiche2.jpeg",
+    "testAffiche.jpeg",
+    "testAffiche2.jpeg"    
+ ];
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -43,15 +79,13 @@
                     <svg class="prev">
                         <use href="icons/sprite.svg#prev"/>
                     </svg>
-                </button>
+
+                </button>                
                 <div class="item-list">
-                  <video  muted controls class="image-item video-viewport" src="video/RickRolled.webm" controls type="video/mp4" poster="img/img-4.png"></video>
-                  <video  muted controls class="image-item video-viewport" src="video/RickRolled.webm" controls type="video/mp4" poster="img/img-2.png"></video>
-                  <video  muted controls class="image-item video-viewport" src="video/RickRolled.webm" controls type="video/mp4" poster="img/img-3.png"></video>
-                  <video  muted controls class="image-item video-viewport" src="video/RickRolled.webm" controls type="video/mp4" poster="img/img-4.png"></video>
-                  <video  muted controls class="image-item video-viewport" src="video/RickRolled.webm" controls type="video/mp4" poster="img/img-2.png"></video>
-                  <video  muted controls class="image-item video-viewport" src="video/RickRolled.webm" controls type="video/mp4" poster="img/img-3.png"></video>
-                  <video  muted controls class="image-item video-viewport" src="video/RickRolled.webm" controls type="video/mp4" poster="img/img-4.png"></video>               
+                <?php foreach($caroussel as $poster => $video): ?>
+                    <video  muted controls class="image-item video-viewport" src="video/<?= $video ?>" controls type="video/mp4" poster="img/<?= $poster ?>"></video>
+                 <?php endforeach; ?>
+
                 </div>
                 <button class="slide-button" id="right">
                     <svg class="next">
@@ -68,32 +102,34 @@
         </section>
         <section id="news">
             <h2>Les dernières news</h2> 
-          <div class="sheets">
-              <div class="sheet-template">
-                  <h3>Sheet template 1</h3>
-                  <img src="" alt="dernières news">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed risus ultrices magna ultrices sollicitudin. Donec tempor pretium libero eu maximus. Praesent rhoncus gravida odio, ut pharetra augue luctus at. Mauris dignissim felis ipsum, in ultrices nunc dictum quis. Curabitur placerat sapien at lectus lacinia, sed consectetur turpis pellentesque. Maecenas mollis sem non turpis vulputate molestie nec a urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ornare mi ac lacus accumsan scelerisque. 
-                      Mauris consectetur dui ante, vitae semper tellus ullamcorper a. Integer posuere varius elit, eu posuere justo sagittis aliquam. Sed at tellus gravida, interdum dolor id, interdum odio. 
-                  </p>    
-              </div>
-              <div class="sheet-template">
-                  <h3>Sheet template 2</h3>
-                  <img src="" alt="dernières news">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed risus ultrices magna ultrices sollicitudin. Donec tempor pretium libero eu maximus. Praesent rhoncus gravida odio, ut pharetra augue luctus at. Mauris dignissim felis ipsum, in ultrices nunc dictum quis. Curabitur placerat sapien at lectus lacinia, sed consectetur turpis pellentesque. Maecenas mollis sem non turpis vulputate molestie nec a urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ornare mi ac lacus accumsan scelerisque. 
-                      Mauris consectetur dui ante, vitae semper tellus ullamcorper a. Integer posuere varius elit, eu posuere justo sagittis aliquam. Sed at tellus gravida, interdum dolor id, interdum odio. 
-                  </p>    
-              </div>
-              <div class="sheet-template">
-                  <h3>Sheet template 3</h3>
-                  <img src="" alt="dernières news">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed risus ultrices magna ultrices sollicitudin. Donec tempor pretium libero eu maximus. Praesent rhoncus gravida odio, ut pharetra augue luctus at. Mauris dignissim felis ipsum, in ultrices nunc dictum quis. Curabitur placerat sapien at lectus lacinia, sed consectetur turpis pellentesque. Maecenas mollis sem non turpis vulputate molestie nec a urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ornare mi ac lacus accumsan scelerisque. 
-                      Mauris consectetur dui ante, vitae semper tellus ullamcorper a. Integer posuere varius elit, eu posuere justo sagittis aliquam. Sed at tellus gravida, interdum dolor id, interdum odio. 
-                  </p>    
-              </div>
-          </div>
+
+            <div class="sheets">
+                <div class="sheet-template">
+                    <h3>Sheet template 1</h3>
+                    <img src="" alt="dernières news">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed risus ultrices magna ultrices sollicitudin. Donec tempor pretium libero eu maximus. Praesent rhoncus gravida odio, ut pharetra augue luctus at. Mauris dignissim felis ipsum, in ultrices nunc dictum quis. Curabitur placerat sapien at lectus lacinia, sed consectetur turpis pellentesque. Maecenas mollis sem non turpis vulputate molestie nec a urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ornare mi ac lacus accumsan scelerisque. 
+                        Mauris consectetur dui ante, vitae semper tellus ullamcorper a. Integer posuere varius elit, eu posuere justo sagittis aliquam. Sed at tellus gravida, interdum dolor id, interdum odio. 
+                    </p>    
+                </div>
+                <div class="sheet-template">
+                    <h3>Sheet template 2</h3>
+                    <img src="" alt="dernières news">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed risus ultrices magna ultrices sollicitudin. Donec tempor pretium libero eu maximus. Praesent rhoncus gravida odio, ut pharetra augue luctus at. Mauris dignissim felis ipsum, in ultrices nunc dictum quis. Curabitur placerat sapien at lectus lacinia, sed consectetur turpis pellentesque. Maecenas mollis sem non turpis vulputate molestie nec a urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ornare mi ac lacus accumsan scelerisque. 
+                        Mauris consectetur dui ante, vitae semper tellus ullamcorper a. Integer posuere varius elit, eu posuere justo sagittis aliquam. Sed at tellus gravida, interdum dolor id, interdum odio. 
+                    </p>    
+                </div>
+                <div class="sheet-template">
+                    <h3>Sheet template 3</h3>
+                    <img src="" alt="dernières news">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed risus ultrices magna ultrices sollicitudin. Donec tempor pretium libero eu maximus. Praesent rhoncus gravida odio, ut pharetra augue luctus at. Mauris dignissim felis ipsum, in ultrices nunc dictum quis. Curabitur placerat sapien at lectus lacinia, sed consectetur turpis pellentesque. Maecenas mollis sem non turpis vulputate molestie nec a urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ornare mi ac lacus accumsan scelerisque. 
+                        Mauris consectetur dui ante, vitae semper tellus ullamcorper a. Integer posuere varius elit, eu posuere justo sagittis aliquam. Sed at tellus gravida, interdum dolor id, interdum odio. 
+                    </p>    
+                </div>
+            </div>
+
         </section>
       
         <section id="hall">
@@ -118,14 +154,11 @@
                   </svg>
               </button>
               <div class="item-list">
-                  <img src="img/testAffiche.jpeg" alt="poster 1">
-                  <img src="img/testAffiche2.jpeg" alt="poster 2">
-                  <img src="img/testAffiche.jpeg" alt="poster 3">
-                  <img src="img/testAffiche2.jpeg" alt="poster 4">
-                  <img src="img/testAffiche.jpeg" alt="poster 5">
-                  <img src="img/testAffiche2.jpeg" alt="poster 6">
-                  <img src="img/testAffiche.jpeg" alt="poster 7">
-                  <img src="img/testAffiche2.jpeg" alt="poster 8">
+
+                <?php for($i=0; $i<count($affiche);$i++): ?>
+                    <img src="img/Affiche/<?= $affiche[$i] ?>" alt="poster <?= $i+1 ?>">
+                <?php endfor; ?>
+
               </div>
               <button class="slide-button" id="right">
                   <svg class="next">
@@ -141,5 +174,8 @@
           </div>
       </section>      
     </main>
+
+    <?php include '_footer.php' ?>
+
 </body>
 </html>

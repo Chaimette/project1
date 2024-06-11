@@ -43,6 +43,8 @@
             </div>
         </section>
     </div>
+
+    <?php include '_footer.php' ?>
 </body>
 
 </html>
