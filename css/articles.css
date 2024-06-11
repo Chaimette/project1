@@ -108,6 +108,18 @@ h1 {
 
 }
 
-    .btn:hover {
+.btn:hover {
         background-color: #e6b800;
-    }
+}
+
+
+.content p {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #141414;
+}
