@@ -14,7 +14,20 @@
         <p class="sub-title">Film - 2001 - PG-13 - Durée: beaucoup trop long</p>
       </div>
       <div class="title-right">
-        <p>Note des spectateurs: 5.8 /10</p>
+        <p>Note des spectateurs:  5.8 /10</p>
+        <section class="ratings">
+          <label class="score" for="rating"> <h3>Ma note:</h3> </label>
+    
+          <input class="ratingsInput"
+            type="float"
+            id="rating"
+            name="rating"
+            required
+            minlength="1"
+            maxlength="2"
+            size="5"
+          />
+        </section>
       </div>
     </header>
 
@@ -116,26 +129,14 @@
             alt="Acteur 6"
           />
           <div class="actor-details">
-            <h4>Michael Green</h4>
-            <p>Caméo</p>
+            <h4>Chad Lindberg</h4>
+            <p>Jesse</p>
           </div>
         </div>
       
       </div>
     </section>
-    <section class="ratings">
-      <label class="score" for="rating"> Ma note:</label>
-
-      <input class="ratingsInput"
-        type="float"
-        id="rating"
-        name="rating"
-        required
-        minlength="1"
-        maxlength="2"
-        size="5"
-      />
-    </section>
+    
 
     <section class="spec-pictures">
       <h3>Photos</h3>
@@ -143,40 +144,45 @@
         <li>
           <img
             class="pics"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img\films\fnf1.jpg"
             alt=""
           />
         </li>
         <li>
           <img
             class="pics"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img\films\fnf2.jpg"
             alt=""
           />
         </li>
         <li>
           <img
             class="pics"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img\films\fnf3.jpg"
             alt=""
           />
         </li>
         <li>
           <img
             class="pics"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img\films\fnf4.jpg"
             alt=""
           />
         </li>
         <li>
           <img
             class="pics"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img\films\fnf5.jpg"
             alt=""
           />
         </li>
       </ul>
     </section>
+
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img">
+    </div>
 
     <section class="user-reviews">
       <h3>Commentaires des utilisateurs</h3>
@@ -199,5 +205,7 @@
         </div>
       </div>
     </section>
+
+    <script src="js/films.js"></script>
   </body>
 </html>
