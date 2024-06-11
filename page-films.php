@@ -199,5 +199,6 @@
         </div>
       </div>
     </section>
+    <?php include "_footer.php" ?>
   </body>
 </html>
