@@ -1,3 +1,4 @@
+
 <?php
 // caroussel : nomPoster => video
  $caroussel = [
@@ -32,6 +33,7 @@
  ];
 
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -77,11 +79,13 @@
                     <svg class="prev">
                         <use href="icons/sprite.svg#prev"/>
                     </svg>
+
                 </button>                
                 <div class="item-list">
                 <?php foreach($caroussel as $poster => $video): ?>
                     <video  muted controls class="image-item video-viewport" src="video/<?= $video ?>" controls type="video/mp4" poster="img/<?= $poster ?>"></video>
                  <?php endforeach; ?>
+
                 </div>
                 <button class="slide-button" id="right">
                     <svg class="next">
@@ -98,6 +102,7 @@
         </section>
         <section id="news">
             <h2>Les dernières news</h2> 
+
             <div class="sheets">
                 <div class="sheet-template">
                     <h3>Sheet template 1</h3>
@@ -124,6 +129,7 @@
                     </p>    
                 </div>
             </div>
+
         </section>
       
         <section id="hall">
@@ -148,9 +154,11 @@
                   </svg>
               </button>
               <div class="item-list">
+
                 <?php for($i=0; $i<count($affiche);$i++): ?>
                     <img src="img/Affiche/<?= $affiche[$i] ?>" alt="poster <?= $i+1 ?>">
                 <?php endfor; ?>
+
               </div>
               <button class="slide-button" id="right">
                   <svg class="next">
@@ -166,6 +174,8 @@
           </div>
       </section>      
     </main>
+
     <?php include '_footer.php' ?>
+
 </body>
 </html>
