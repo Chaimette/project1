@@ -31,13 +31,13 @@ h1 {
 
 .headline {
     position: relative;
-    background-image: url('images/denzel-background.jpg');
+    background-image: url('../img/articles/denzel-background.jpg');
     background-size: cover;
     background-position: center;
     padding: 40px;
     text-align: center;
     border-radius: 15px;
-    height: 300px
+    height: 300px;
 }
 
 .headline-image {
@@ -52,6 +52,7 @@ h1 {
     flex-direction: column;
     gap: 20px;
     margin-top: 20px;
+    align-items: center;
 }
 
 .article {
@@ -59,7 +60,9 @@ h1 {
     background-color: #606060;
     border-radius: 10px;
     overflow: hidden;
-}
+    width: 80%; 
+    max-width: 900px; 
+}   
 
 .article img {
     width: 150px;
@@ -72,15 +75,39 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.content p {
-    margin: 0 0 10px;
-    font-size: 1.2em;
+    text-align: left;
 }
 
 .content h2 {
-    margin: 0;
-    font-size: 1.5em;
+    margin: 20 0 0;
+    font-size: 1.4em;
     color: #141414;
+    text-align: center;
 }
+
+.content p {
+    margin: 0 0 20px;
+    font-size: 1.1em;
+}
+
+.btn {
+    display: block;
+    margin: 10px auto 0;
+    padding: 5px 10px;
+    font-size: 1em;
+    color: #141414;
+    background-color: #ffc700;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px; 
+    max-width: 100%;
+
+}
+
+    .btn:hover {
+        background-color: #e6b800;
+    }
