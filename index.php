@@ -32,6 +32,31 @@
     "testAffiche2.jpeg"    
  ];
 
+$fame = [
+    "The Matrix" => [ "affiche/testAffiche.jpeg" => 8.7],
+    "Star Wars: Épisode IV - Un nouvel espoir" => [ "affiche/testAffiche2.jpeg" => 8.6],
+    "La Ligne Verte" => [ "affiche/testAffiche.jpeg" => 8.6],
+    "Le Seigneur des anneaux : Les Deux Tours" => [ "affiche/testAffiche.jpeg" => 8.8],
+    "Il faut sauver le soldat Ryan" => [ "affiche/testAffiche.jpeg" => 8.6],
+];
+
+$shame = [
+    "Le fils du mask" => [ "affiche/testAffiche.jpeg" => 2.3],
+    "House of the Dead" => [ "affiche/testAffiche2.jpeg" => 2.1],
+    "Troll II" => [ "affiche/testAffiche.jpeg" => 3.0],
+    "Winnie-the-Pooh: Blood and Honey" => [ "affiche/testAffiche.jpeg" => 2.9],
+    "Mortal kombat: Destruction finale" => [ "affiche/testAffiche.jpeg" => 3.6],
+];
+
+ function prepareNotes($movies){
+    $res=[];
+    foreach($movies as $title => $poster){
+        foreach($poster as $img => $note){
+           array_push($res, "<div class=\"note\"><img src=\"img/".$img."\"><p>" . $note . "/10</p><h3>" . $title . "</h3></div>");
+        }    
+    }
+    return $res;
+ }
 ?>
 
 <!DOCTYPE html>
@@ -48,28 +73,7 @@
 <body>
     <header>
         <section>
-            <nav>
-                <img src="img/Logo.jpg" class="Logo" alt="Logo du site"/>
-                <input type="checkbox" class ="toggle-btn">
-                <div class="burger-menu"></div>
-                <div class="menu-wrapper">
-                    <div class="toggle-menu">                    
-                        <h2>Menu</h2>
-                        <menu>
-                            <li><a href="articles.html">Articles</a></li>
-                            <li><a href="">Actualités</a></li>
-                            <li><a href="page-films.html">Films</a></li>
-                        </menu>
-                    </div>
-                    <form action="" class="searchBar">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                    <h3>
-                        <a href="">Se Connecter</a>
-                    </h3>
-                </div>
-            </nav>        
+    <?php include "_navbar.php" ?>
         </section>    
     </header>
     <main>
@@ -135,15 +139,21 @@
         <section id="hall">
           <div class="fame">
               <h2>Hall of Fame</h2>
-              <div class="note"><p> /10 </p><h3>TITRE DU FILM</h3></div>
-              <div class="note"><p> /10 </p><h3>TITRE DU FILM</h3></div>
-              <div class="note"><p> /10 </p><h3>TITRE DU FILM</h3></div>
+              <?php 
+                $data =prepareNotes($fame);
+                for($i =0; $i<count($data);$i++): ?>
+                 <?= $data[$i] ?> 
+
+                <?php endfor; ?>
           </div>
           <div class="shame">
               <h2>Tops navets</h2>
-              <div class="note"><p> /10 </p><h3>TITRE DU FILM</h3></div>
-              <div class="note"><p> /10 </p><h3>TITRE DU FILM</h3></div>
-              <div class="note"><p> /10 </p><h3>TITRE DU FILM</h3></div>
+              <?php 
+                $data =prepareNotes($shame);
+                for($i =0; $i<count($data);$i++): ?>
+                 <?= $data[$i] ?> 
+
+                <?php endfor; ?>
           </div>
         </section>
         <section id="poster" class="carousel">

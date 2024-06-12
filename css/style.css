@@ -289,6 +289,10 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 1rem;
+    background-color: var(--second-color);
+    color: var(--bg-widgets);
+    padding:10px;
 }
 
 #poster 
@@ -299,9 +303,10 @@ a{
     display:block;
     margin:0 auto;
 }
-#poster .slider-wrapper
+#poster .slider-wrapper .item-list .image-item
 {
     height:100%;
+    resize: none;
 }
 
 @media screen and (width <= 768px) { 
@@ -337,15 +342,22 @@ a{
     #hall
     {
         flex-direction: column;
-        padding: 0;
-        margin: 0;
         gap:2rem;
         align-items: center;
-        width: 100vw;
-    }
-    .fame .shame
+        width: 100%;
+    }    
+    .fame
     {
-        width: 80vw;
+        box-sizing: content-box !important;
+        width: 100vw;
+        padding: 2rem;
+
+    }
+    .shame
+    {
+        box-sizing: content-box !important;
+        width: 100vw;
+        padding: 2rem;
     }
     .sheet-template
     {
