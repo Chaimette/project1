@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <header>
+    <?php include "_navbar.php"; ?>
+    </header>
     <div class="container">
         <h1>A la Une</h1>
         <div class="headline"></div>
@@ -43,7 +46,6 @@
             </div>
         </section>
     </div>
-
     <?php include '_footer.php' ?>
 </body>
 
