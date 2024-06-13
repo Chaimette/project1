@@ -1,0 +1,14 @@
+@import "_variables.css";
+
+footer {
+    margin-top: auto;
+    padding: 2rem;
+    background-color: var(--second-color);
+    color:var(--bg-widgets);
+    text-align: center;
+    font-size: .875rem;
+}
+
+footer p {
+    margin: 0;
+}

@@ -14,7 +14,7 @@
         <p class="sub-title">Film - 2001 - PG-13 - Durée: beaucoup trop long</p>
       </div>
       <div class="title-right">
-
+      <?php include "_navbar.php" ?>
         <h4 class="h4size"> Note: 5.8/10</h4>
         <section class="ratings">
           <label class="score" for="rating"> <h4 class="h4size">Ma note:</h4> </label>

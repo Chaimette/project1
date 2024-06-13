@@ -1,10 +1,12 @@
+@import "_navbar.css";
+@import "_variables.css";
+@import "_footer.css";
 :root {
     --primary-color: #FFC700;
     --secondary-color: #4B0004;
     --dark-color: black;
 
 }
-
 *{
     color: var(--primary-color);
     

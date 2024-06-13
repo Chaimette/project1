@@ -7,7 +7,7 @@
             <div class="toggle-menu">
                 <h2>Menu</h2>
                 <menu>
-                    <li><a href="index.php">Acceuil</a></li>
+                    <li><a href="index.php">Accueil</a></li>
                     <li><a href="articles.php">Articles</a></li>
                     <li><a href="">Contact</a></li>
                     <li><a href="page-films.php">Films</a></li>
