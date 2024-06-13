@@ -20,3 +20,38 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+
+//SHOW MORE BUTTON SUMMARY
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const showMoreBtn = document.getElementById('show-more-btn');
+    const moreText = document.querySelector('.more-text');
+
+    const toggleShowMoreButton = () => {
+        if (window.innerWidth <= 1000) {
+            moreText.style.display = 'none';
+            showMoreBtn.style.display = 'inline-block';
+        } else {
+            moreText.style.display = 'inline';
+            showMoreBtn.style.display = 'none';
+        }
+    };
+
+    // Initial check
+    toggleShowMoreButton();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', toggleShowMoreButton);
+
+    showMoreBtn.addEventListener('click', () => {
+        if (moreText.style.display === 'none' || moreText.style.display === '') {
+            moreText.style.display = 'inline';
+            showMoreBtn.textContent = 'Afficher moins';
+        } else {
+            moreText.style.display = 'none';
+            showMoreBtn.textContent = 'Afficher plus';
+        }
+    });
+});
+

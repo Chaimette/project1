@@ -7,7 +7,7 @@
 
 *{
     color: var(--primary-color);
-    margin: 3vw;
+    
     list-style: none;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -16,19 +16,24 @@
 
 body{
     background-color: var(--dark-color);
+    margin: 10vw;
 
 }
  
         /* HEADER */
 
-header {
+.banner {
     display: flex;
+    margin: 32px;
+    
     justify-content: space-between;
     background-color: #160e00;
     border-radius: 25px;
 }
-
-.title {
+.title-left {
+    margin: 32px;
+}
+.banner-title {
     margin: 10px;
     
 }
@@ -37,10 +42,65 @@ header {
     
 }
 
+.title-right {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 96px 32px 32px;
+}
 .title-right p {
     font-weight:bold;
+    margin: 0;
+    text-align: right;
 }
-.poster {
+
+
+.banner>.title-right>h4 {
+    margin-top: 1.3rem;
+}
+.h4size {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    text-align: right;
+    max-width: 113px;
+}
+/* MA NOTE */
+
+.wrapper {
+    position: relative;
+}
+.score {
+    height: 19.2px;
+    margin:0;
+}
+.ratings {
+    margin:0;
+}
+
+.ratingsInput {
+    margin: 0 0 0 2vw;
+    background-color:antiquewhite;
+    border-radius: 50px;
+    color: var(--dark-color);
+    font-weight: bold;
+    padding-left: 10px;
+    
+}
+.ratings button {
+    padding: 0;
+    position: absolute;
+    border-radius: 50%;
+    right:15px;
+    aspect-ratio: 1;
+    background-color: #4B0004;
+}        
+.ratingsInput,
+    .score {   
+    height: 1.4rem;
+}
+
+
+
+.posterSummary {
     height: 416px;
     margin:0;
     border-radius: 15px;
@@ -49,6 +109,35 @@ header {
     display: flex;
     background-color:#160e00;
    border-radius: 15px;
+   height: auto;
+   margin-bottom: 30px;
+}
+
+.summary {
+    margin: 10px 30px 10px 30px;
+}
+.summary>p {
+    margin-bottom: 0;
+}
+
+
+.more-text {
+    display: none;
+}
+
+#show-more-btn {
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#show-more-btn:hover {
+    background-color: #0056b3;
 }
 
             /* TRAILER */
@@ -56,8 +145,9 @@ header {
 .trailer  {
     display: flex;
     justify-content: center;
+    margin: 100px;
 }
-iframe {
+.video-trailer {
   
     border-radius: 15px;
 }
@@ -71,9 +161,9 @@ iframe {
 
 .actors-section h3 {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin: 15px;
     text-align: left;
-    padding: 2vw;
+    /* padding: 2vw; */
     border-radius: 15px;
     display: inline;
 }
@@ -82,28 +172,36 @@ iframe {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin-top: 50px;
 }
 
 .actor {
     display: flex;
     align-items: center;
     width: 31%; 
+    height: 8rem;
     margin: 0;
     box-sizing: border-box;
     background-color: #160e00;
     border-radius: 70px;
+    min-width: 261px;
 }
 
 .actor-img {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-right: 20px;
+    margin-left: 50px;
     object-fit: cover;
 }
 
 .actor-details {
-    flex-grow: 1;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 110px;
+    text-align: left;
+
 }
 
 .actor-details h4 {
@@ -123,27 +221,28 @@ iframe {
 
 .spec-pictures {
     text-align: left;
-    font-size: larger;
+    /* font-size: large; */
     padding-left: 14px;
 
 }
 
 .spec-pictures h3 {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+    margin-top: 100px;
+    font-size: 1.5rem;
 }
 
-.spec-pictures ul {
+.pic-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 80px 40px;
     display: flex;
-    margin-left: 40px;
+    flex-wrap: wrap;
 }
 
 .spec-pictures ul li {
     margin-right: 0;
     margin-left: 5px;
-    /* padding-left: 2vw; */
     margin-top: 10px;
 }
 
@@ -157,66 +256,46 @@ iframe {
     height: 300px;
 }
 
-            /* MA NOTE */
-
-
-label {
-    display: block;
-   font-size:x-large;
-  }
-  
-  input,
-  label {
-    margin: 0 55px;
-    height: 2rem;
-    
-  }
-  input {
-    background-color: #666;
-    border-radius: 5px;
-  }
-
             /* REVIEWS */
 
 .user-reviews {
-    width: 100%;
     text-align: left;
-    margin-top: -5vw ;
+    /* margin-top: -5vw ; */
 }
 
 .user-reviews h3 {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    font-size: 1.5rem;
 }
 
 .user-reviews{
-    width: 60%;
     box-sizing: border-box;
     margin-bottom: 20px;
     padding: 10px;
-    /* background-color: #4B0004; */
 }
 
 .all-reviews {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4%;
-    /* background-color: #4B0004; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: auto;
 }
 .reviews {
     background-color: #160e00;
     padding: 20px;
     border-radius: 15px;
+    margin: 0;
+    min-width: 206px;
+    margin: 10px;
 }
 
 .reviews h4 {
-    margin: 0 0 10px 0;
-    /* background-color: #4B0004; */
+    margin: 0 0 20px 0;
 
 }
 
 .reviews p {
-    margin: 0;
-    /* background-color: #4B0004; */
+    margin: 10px 0 0 0;
 
 }
 
@@ -276,4 +355,94 @@ label {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* //////////// */
+
+form>p {
+    text-align: center;
+    margin: 0 auto 25px auto;
+    font-size: larger;
+}
+.leaveReview form,
+.errorPanel {
+  width: 60%;
+  background-color: #160e00;
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+  box-shadow: 5px 5px 15px -5px rgb(69, 69, 69);
+}
+
+.leaveReview form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: large;
+    font-weight: regular;
+}
+  
+.leaveReview form div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 50px;
+}
+
+.leaveReview form input{
+    width: 35%;
+    height: 1.5rem;
+}
+
+.leaveReview form textarea{
+    width: 80%;
+}
+.leaveReview form input,
+.leaveReview form textarea {
+    padding: 0px;
+    border-radius: 5px;
+    margin: 5px 0 0 0;
+    border-style: none;
+    background-color: antiquewhite;
+    color: black;
+    font-size: 1rem;
+}
+  
+.review-button {
+    font-size: large;
+    padding: 8px;
+    margin: 0;
+    height:2.5rem;
+    width: 30%;
+    background-color: #4B0004;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.review-button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+  .inputReview {
+    margin:0;
+  }
+
+  /* /////////////////////////////////////////////////// */
+
+@media screen and (max-width: 1000px) {
+    
+.more-text {
+    display: none;
+}
+
+#show-more-btn {
+    display: inline-block;
+}
+
+.summary>p {
+    font-size:15px;
+}
+}
+.leaveReview form input{
+    min-width: 18ch;
 }
