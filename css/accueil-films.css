@@ -1,0 +1,75 @@
+@import "_variables.css";
+@import "_footer.css";
+@import "_navbar.css";
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--main-color);
+    color: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+    
+    /* height: 100vh; */
+    margin: 0;
+}
+nav {
+    height: 4rem;
+}
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: left; */
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.film-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 100px;
+    padding-top:150px;
+    overflow: scroll;
+}
+
+.film {
+    margin: 20px;
+    text-align: center;
+}
+
+.film img {
+    width: 150px;
+    height: 225px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.film img:hover {
+    transform: scale(1.05);
+}
+
+.film h2 {
+    font-size: 1.5em;
+    margin: 10px 0 5px 0;
+}
+
+.film p {
+    font-size: 1em;
+    margin: 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

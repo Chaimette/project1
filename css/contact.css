@@ -1,0 +1,67 @@
+@import "_variables.css";
+@import "_footer.css";
+@import "_navbar.css";
+
+body {
+    background-color: var(--main-color);
+    color: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+
+}
+
+.contact-container {
+    padding-left: 200px;
+    padding-top: 200px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 100px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+.contact-form button:hover {
+    background-color: #e0b800;
+}
+
+/* .message {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 20px;
+} */
