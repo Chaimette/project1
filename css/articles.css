@@ -8,7 +8,7 @@ body {
 
 h1 {
 
-    color: #606060
+    color: #4b0004
 }
 
 .container {
@@ -18,33 +18,38 @@ h1 {
 }
 
 
-.headline {
-    padding: 40px;
-    text-align: center;
-}
-
 .headline h1 {
     margin: 0;
     font-size: 3em;
-    color: #606060;
+    color: #4b0004;
 }
 
-.headline {
+.headline { 
     position: relative;
-    background-image: url('../img/articles/denzel-background.jpg');
+    background-image: url('../img/imgarticles/the-acolyte-une.jpg');
     background-size: cover;
     background-position: center;
     padding: 40px;
     text-align: center;
     border-radius: 15px;
-    height: 300px;
+    height: 350px;
 }
+ 
 
 .headline-image {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
     margin-top: 20px;
+}
+
+.headline-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.headline-link:hover {
+    text-decoration: underline;
 }
 
 .articles {
@@ -55,17 +60,24 @@ h1 {
     align-items: center;
 }
 
+.articles h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #4b0004;
+}
+
 .article {
     display: flex;
-    background-color: #606060;
+    background-color: #160e00;
     border-radius: 10px;
     overflow: hidden;
     width: 80%; 
-    max-width: 900px; 
+    max-width: 1000px; 
 }   
 
 .article img {
-    width: 150px;
+    width: 200px;
     height: auto;
     border-radius: 10px 0 0 10px;
 }
@@ -81,29 +93,36 @@ h1 {
 .content h2 {
     margin: 20 0 0;
     font-size: 1.4em;
-    color: #141414;
+    color: #ffc700;
     text-align: center;
 }
 
 .content p {
     margin: 0 0 20px;
-    font-size: 1.1em;
+    font-size: 0.8em;
+    color:#ffc700;
+}
+
+.author {
+    color: #141414; 
+    font-style: italic;
+    margin-top: 10px;
 }
 
 .btn {
     display: block;
     margin: 10px auto 0;
     padding: 5px 10px;
-    font-size: 1em;
+    font-size: 0.8em;
     color: #141414;
-    background-color: #ffc700;
+    background-color: #4b0004;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 150px; 
+    width: 100px; 
     max-width: 100%;
 
 }
@@ -111,3 +130,5 @@ h1 {
     .btn:hover {
         background-color: #e6b800;
     }
+
+
