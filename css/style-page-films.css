@@ -1,6 +1,7 @@
 @import "_navbar.css";
 @import "_variables.css";
 @import "_footer.css";
+
 :root {
     --primary-color: #FFC700;
     --secondary-color: #4B0004;
@@ -15,6 +16,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.2;
 }   
+nav {
+    top:0;
+    left:0;
+    align-items: start;
+    height: 7rem !important;
+}
 
 body{
     background-color: var(--dark-color);
@@ -91,7 +98,7 @@ body{
     padding: 0;
     position: absolute;
     border-radius: 50%;
-    right:15px;
+    right:0;
     aspect-ratio: 1;
     background-color: #4B0004;
 }        
