@@ -9,10 +9,11 @@ body {
     text-align: center;
 }
 
-h1 {
-
+h1 { 
+    margin-top: 180px;
+    margin-bottom: 40px;
     color: #4b0004
-}
+ }
 
 .container {
     max-width: 1200px;
@@ -114,10 +115,10 @@ h1 {
 
 .btn {
     display: block;
-    margin: 10px auto 0;
+    margin: 15px auto 0;
     padding: 5px 10px;
-    font-size: 0.8em;
-    color: #141414;
+    font-size: 0.9em;
+    color: #ffc700;
     background-color: #4b0004;
     border: none;
     border-radius: 5px;
@@ -125,8 +126,8 @@ h1 {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100px; 
-    max-width: 100%;
+    width: 150px; 
+    max-width: 150%;
 
 }
 
