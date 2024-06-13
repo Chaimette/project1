@@ -7,18 +7,18 @@
     <title>Projet 1</title>
   </head>
   <body>
-    <header id="header">
+    <section class="banner">
       <div class="title-left">
-        <h1 class="title">Fast and Furious</h1>
+        <h1 class="banner-title">Fast and Furious</h1>
         <p class="sub-title">Titre original: The Fast and the Furious</p>
         <p class="sub-title">Film - 2001 - PG-13 - Durée: beaucoup trop long</p>
       </div>
       <div class="title-right">
 
-        <p>Note des spectateurs:  5.8 /10</p>
+        <h4 class="h4size"> Note: 5.8/10</h4>
         <section class="ratings">
-          <label class="score" for="rating"> <h3>Ma note:</h3> </label>
-    
+          <label class="score" for="rating"> <h4 class="h4size">Ma note:</h4> </label>
+          <div class="wrapper">
           <input class="ratingsInput"
             type="float"
             id="rating"
@@ -26,15 +26,19 @@
             required
             minlength="1"
             maxlength="2"
-            size="5"
-          />
+            size="4"
+          />           
+          <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+          </button> 
+          </div>
         </section>
 
       </div>
-    </header>
+    </section>
 
     <section class="in-summary">
-      <img class="poster" src="img/films/fandf1.jpg" alt="movie poster" />
+      <img class="posterSummary" src="img/films/fandf1.jpg" alt="movie poster" />
 
       <div class="summary">
         <h3>Synopsis</h3>
@@ -46,16 +50,18 @@
           journées sont consacrées à bricoler et à relooker des modèles haut de
           gamme, à les rendre toujours plus performants et plus voyants, à
           organiser des joutes illicites où de nombreux candidats s'affrontent
-          sans merci sous le regard énamouré de leurs groupies. A la suite de
+          sans merci sous le regard énamouré de leurs groupies. <span class="more-text"> A la suite de
           plusieurs attaques de camions, la police de L.A. décide d'enquêter sur
           le milieu des street racers. Brian, un jeune policier, est chargé
           d'inflitrer la bande de Toretto, qui figure, avec celle de son rival
-          Johnny Tran, au premier rang des suspects.
+          Johnny Tran, au premier rang des suspects. </span>
         </p>
+        <button id="show-more-btn">Afficher plus</button>
       </div>
     </section>
     <section class="trailer">
       <iframe
+        class="video-trailer"
         width="700"
         height="420"
         src="https://www.youtube-nocookie.com/embed/Zcosa9LUaE0?si=zmSqESPOPBRbqWd-"
@@ -72,7 +78,7 @@
         <div class="actor">
           <img
             class="actor-img"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img/films/vindiesel.webp"
             alt="Acteur 1"
           />
           <div class="actor-details">
@@ -83,7 +89,7 @@
         <div class="actor">
           <img
             class="actor-img"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img/films/michellerodriguez.jpg"
             alt="Acteur 2"
           />
           <div class="actor-details">
@@ -94,7 +100,7 @@
         <div class="actor">
           <img
             class="actor-img"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img/films/paulwalker.jpg"
             alt="Acteur 3"
           />
           <div class="actor-details">
@@ -105,7 +111,7 @@
         <div class="actor">
           <img
             class="actor-img"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img/films/jordanabrewster.jpeg"
             alt="Acteur 4"
           />
           <div class="actor-details">
@@ -116,18 +122,18 @@
         <div class="actor">
           <img
             class="actor-img"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img/films/tyresegibson.jpg"
             alt="Acteur 5"
           />
           <div class="actor-details">
-            <h4>Tyres Gibson</h4>
+            <h4>Tyrese Gibson</h4>
             <p>Roman</p>
           </div>
         </div>
         <div class="actor">
           <img
             class="actor-img"
-            src="https://fastly.picsum.photos/id/827/200/300.jpg?hmac=0Q7y5JGXuxSXgO7VUvdNhXC4yoAupOJiKmRS9RoPqs8"
+            src="img/films/chadlindberg.jpg"
             alt="Acteur 6"
           />
           <div class="actor-details">
@@ -139,20 +145,6 @@
         </div>
       
       </div>
-    </section>
-
-    <section class="ratings">
-      <label class="score" for="rating"> Ma note:</label>
-
-      <input class="ratingsInput"
-        type="float"
-        id="rating"
-        name="rating"
-        required
-        minlength="1"
-        maxlength="2"
-        size="5"
-      />
     </section>
 
 
@@ -227,15 +219,34 @@
         </div>
         <div class="reviews">
           <h4>De @jaiplusdidée</h4>
-          <p>Un long récit épique et captivant, un vrai réga-haha je déconne</p>
+          <p>J'ai perdu 1h47 de ma vie</p>
         </div>
         <div class="reviews">
           <h4>De @sendhelp59</h4>
-          <p>J'ai perdu 1h47 de ma vie</p>
+          <p>Un long récit épique et captivant, un vrai réga-haha je déconne.</p>
         </div>
       </div>
     </section>
 
+      <section class="leaveReview">
+
+    
+    <form action="page-review-result.php" method="post">
+    <p> Dites-nous ce que vous en avez pensé !</p>
+            <div>
+                <label class="inputReview" for="userName">Nom d'utilisateur : </label>
+                <input type="text" id="userName" name="userName" required="true">
+            </div>
+
+            <div>
+                <label class="inputReview" for="yourReview">Votre commentaire : </label>
+                <textarea name="yourReview" id="yourReview" required="true" rows="8"></textarea>
+            </div>
+            <div class="buttonsLine">
+                <button class="review-button" type="submit">Envoyer </button>
+            </div>
+        </form>
+        </section>
 
     <script src="js/films.js"></script>
 
