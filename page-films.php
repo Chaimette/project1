@@ -18,6 +18,7 @@
       <div class="title-right">
 
         <h4 class="h4size"> <?php echo $rating ?> </h4>
+
         <section class="ratings">
         <form action="process_rating.php" method="post">
           <label class="score" for="rating"> <h4 class="h4size">Ma note:</h4> </label>
