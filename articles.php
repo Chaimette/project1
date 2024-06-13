@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php include "_navbar.php" ?>
+    <?php include '_navbar.php' ?>  
     <div class="container">
         <h1><a href="https://www.francetvinfo.fr/replay-radio/l-empire-des-series/the-acolyte-la-nouvelle-serie-star-wars-un-melange-de-kill-bill-et-de-la-reine-des-neiges_6563639.html" target="_blank" class="headline-link">A la Une chez Nous !</a></h1>
         <!-- <h1>A la Une chez Nous !</h1> -->
@@ -70,11 +70,6 @@
         </div>
     </section>
     </div>
-    <<<<<<< HEAD </body>
-        =======
-        <?php include '_footer.php' ?>
+  <?php include '_footer.php' ?>
 </body>
-
->>>>>>> main
-
 </html>
