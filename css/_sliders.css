@@ -1,0 +1,140 @@
+.slider-wrapper
+{
+    position: relative;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto;
+}
+.slider-wrapper .item-list
+{
+    display: flex;
+    gap:18px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    scrollbar-width: none;
+}
+.slider-wrapper .item-list .image-item
+{   
+    width: 640px; 
+    height:480px;    
+}
+.slider-wrapper .slide-button
+{
+    position:absolute;
+    top: 50%;
+    height:100%;
+    width:7rem;
+    border: none;
+    outline:none;
+    background: var(--text);
+    cursor: pointer;
+    opacity: 0.5;
+    transform:translateY(-50%);
+    color:white;
+}
+.slider-wrapper:hover .slide-button 
+{
+   visibility: visible;
+}
+.slider-wrapper .slide-button 
+{
+   visibility: hidden;
+}
+.slider-wrapper .slide-button .prev
+{
+    color:var(--bg-widgets);
+}
+.slider-wrapper .slide-button .next
+{
+    color:var(--bg-widgets);
+}
+.slider-wrapper .slide-button#left
+{
+    left:-5px;
+}
+.slider-wrapper .slide-button#right
+{
+    right:-5px;
+}
+.carousel .slider-scrollbar
+{
+    height:24px;
+    width: 100%;
+    display:flex;
+    align-items:center;
+}
+.slider-scrollbar .scrollbar-track{
+    height : 4px;
+    width: 100%;
+    background: #ccc; 
+    border-radius: 4px;;   
+    position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track
+{
+    height:6px;
+}
+.slider-scrollbar .scrollbar-thumb:active
+{
+    cursor: grabbing;
+    height: 8px;
+    top:-1px;
+}
+.slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    height : 100%;
+    width: 50%;
+    background: var(--bg-widgets);    
+    border-radius: inherit;
+    cursor: grab;
+}
+.slider-scrollbar .scrollbar-thumb::after
+{
+    content:"";
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:-10px;
+    bottom:-10px;
+}
+.image-item{
+    height: auto !important;
+    width: 100vw !important;
+}
+.slider-wrapper .item-list
+{
+    gap:0px;
+}
+.slider-wrapper .slide-button .prev
+{
+    
+    scale: 0.5;
+    transform:translateX(-45%);
+}
+.slider-wrapper .slide-button .next
+{
+    right:0px;
+    scale: 0.5;
+    transform:translateX(-20%);
+}
+.slider-wrapper .slide-button#left
+{        
+    left:0px;
+}
+.slider-wrapper .slide-button#right
+{
+    right:0px;
+}
+.slider-wrapper .slide-button
+{
+    background: transparent;
+}
+.slider-wrapper:hover .slide-button#right
+{
+    right:0px;
+}
+.slider-scrollbar
+{
+    visibility: hidden;
+}

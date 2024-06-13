@@ -1,5 +1,6 @@
 @import "_navbar.css";
 @import "_variables.css";
+@import "_footer.css";
 
 body {
     margin: 0;

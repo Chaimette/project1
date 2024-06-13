@@ -1,8 +1,6 @@
 <?php include "php/indexDataPull.php" ?>
-
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +10,9 @@
     <title>Document</title>
     <script type="text/javascript" src="js/carousel.js"></script>
 </head>
-
 <body>
     <header>
-        <section>
-            <?php include "_navbar.php" ?>
-        </section>
+        <?php include "_navbar.php" ?>
     </header>
     <main>
         <section class="carousel">
@@ -127,9 +122,7 @@
             </div>
         </section>
     </main>
-
     <?php include '_footer.php' ?>
-
 </body>
 
 </html>
