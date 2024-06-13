@@ -9,8 +9,8 @@
                 <menu>
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="articles.php">Articles</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="page-films.php">Films</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="accueil-films.php">Films</a></li>
                 </menu>
             </div>
             <form action="" class="searchBar">
