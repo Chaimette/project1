@@ -25,7 +25,7 @@ nav {
 
 body{
     background-color: var(--dark-color);
-    margin: 10vw;
+    margin: 10vw 10vw 0 10vw;
 
 }
  
@@ -33,8 +33,7 @@ body{
 
 .banner {
     display: flex;
-    margin: 32px;
-    
+    margin: 200px 32px 32px 32px;
     justify-content: space-between;
     background-color: #160e00;
     border-radius: 25px;
@@ -372,6 +371,10 @@ form>p {
     text-align: center;
     margin: 0 auto 25px auto;
     font-size: larger;
+}
+
+.leaveReview {
+    margin-bottom: 100px;
 }
 .leaveReview form,
 .errorPanel {
