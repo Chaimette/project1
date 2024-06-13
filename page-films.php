@@ -7,16 +7,19 @@
     <title>Projet 1</title>
   </head>
   <body>
+    <?php include "_navbar.php";
+          include "variables.php" ?>
     <section class="banner">
       <div class="title-left">
-        <h1 class="banner-title">Fast and Furious</h1>
-        <p class="sub-title">Titre original: The Fast and the Furious</p>
-        <p class="sub-title">Film - 2001 - PG-13 - Durée: beaucoup trop long</p>
+        <h1 class="banner-title"> <?php echo $title ?> </h1>
+        <p class="sub-title"> <?php echo $originalTitle ?> </p>
+        <p class="sub-title"> <?php echo $movieDetails ?> </p>
       </div>
       <div class="title-right">
 
-        <h4 class="h4size"> Note: 5.8/10</h4>
+        <h4 class="h4size"> <?php echo $rating ?> </h4>
         <section class="ratings">
+        <form action="process_rating.php" method="post">
           <label class="score" for="rating"> <h4 class="h4size">Ma note:</h4> </label>
           <div class="wrapper">
           <input class="ratingsInput"
@@ -27,11 +30,13 @@
             minlength="1"
             maxlength="2"
             size="4"
+            step="0.1"
           />           
           <button>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
           </button> 
           </div>
+        </form>
         </section>
 
       </div>
@@ -75,74 +80,22 @@
     <section class="actors-section">
       <h3>Casting</h3>
       <div class="actors-list">
-        <div class="actor">
-          <img
-            class="actor-img"
-            src="img/films/vindiesel.webp"
-            alt="Acteur 1"
-          />
-          <div class="actor-details">
-            <h4>Vin Diesel</h4>
-            <p>Dominic Toretto</p>
-          </div>
-        </div>
-        <div class="actor">
-          <img
-            class="actor-img"
-            src="img/films/michellerodriguez.jpg"
-            alt="Acteur 2"
-          />
-          <div class="actor-details">
-            <h4>Michelle Rodriguez</h4>
-            <p>Letty</p>
-          </div>
-        </div>
-        <div class="actor">
-          <img
-            class="actor-img"
-            src="img/films/paulwalker.jpg"
-            alt="Acteur 3"
-          />
-          <div class="actor-details">
-            <h4>Paul Walker</h4>
-            <p>Brian </p>
-          </div>
-        </div>
-        <div class="actor">
-          <img
-            class="actor-img"
-            src="img/films/jordanabrewster.jpeg"
-            alt="Acteur 4"
-          />
-          <div class="actor-details">
-            <h4>Jordana Brewster</h4>
-            <p>Mia</p>
-          </div>
-        </div>
-        <div class="actor">
-          <img
-            class="actor-img"
-            src="img/films/tyresegibson.jpg"
-            alt="Acteur 5"
-          />
-          <div class="actor-details">
-            <h4>Tyrese Gibson</h4>
-            <p>Roman</p>
-          </div>
-        </div>
-        <div class="actor">
-          <img
-            class="actor-img"
-            src="img/films/chadlindberg.jpg"
-            alt="Acteur 6"
-          />
-          <div class="actor-details">
 
-            <h4>Chad Lindberg</h4>
-            <p>Jesse</p>
-
+      <?php 
+        
+        foreach ($actors as $actor) {
+          echo "<div class= 'actor'>
+            <img class='actor-img' src='{$actor['image']}' alt='{$actor['name']}' />
+          <div class='actor-details'>
+            <h4>{$actor['name']}</h4>
+            <p>{$actor['role']}</p>
           </div>
-        </div>
+        </div>";
+        }
+      ?>
+
+        
+        
       
       </div>
     </section>
@@ -151,51 +104,12 @@
     <section class="spec-pictures">
       <h3>Photos</h3>
       <ul class="pic-list">
-        <li>
-          <img
-            class="pics"
-
-            src="img\films\fnf1.jpg"
-
-            alt=""
-          />
-        </li>
-        <li>
-          <img
-            class="pics"
-
-            src="img\films\fnf2.jpg"
-
-            alt=""
-          />
-        </li>
-        <li>
-          <img
-            class="pics"
-
-            src="img\films\fnf3.jpg"
-
-            alt=""
-          />
-        </li>
-        <li>
-          <img
-            class="pics"
-
-            src="img\films\fnf4.jpg"
-
-            alt=""
-          />
-        </li>
-        <li>
-          <img
-            class="pics"
-
-            src="img\films\fnf5.jpg"
-
-            alt=""
-          />
-        </li>
+      <?php
+      $photos = ["fnf1.jpg", "fnf2.jpg", "fnf3.jpg", "fnf4.jpg", "fnf5.jpg"];
+      foreach ($photos as $photo) {
+        echo "<li><img class='pics' src='img/films/$photo' alt=''></li>";
+      }
+    ?>
       </ul>
     </section>
 
@@ -209,29 +123,19 @@
     <section class="user-reviews">
       <h3>Commentaires des utilisateurs</h3>
       <div class="all-reviews">
-        <div class="reviews">
-          <h4>De @PaulWalker4Ever</h4>
-          <p>Topissime !</p>
-        </div>
-        <div class="reviews">
-          <h4>De @grosnazedu79</h4>
-          <p>Nul à ch***</p>
-        </div>
-        <div class="reviews">
-          <h4>De @jaiplusdidée</h4>
-          <p>J'ai perdu 1h47 de ma vie</p>
-        </div>
-        <div class="reviews">
-          <h4>De @sendhelp59</h4>
-          <p>Un long récit épique et captivant, un vrai réga-haha je déconne.</p>
-        </div>
+      <?php
+      
+
+      foreach ($reviews as $review) {
+        echo "<div class='reviews'><h4>De {$review['username']}</h4><p>{$review['comment']}</p></div>";
+      }
+    ?>
       </div>
     </section>
 
-      <section class="leaveReview">
-
     
-    <form action="page-review-result.php" method="post">
+    <section class="leaveReview">
+    <form action="process_review.php" method="post">
     <p> Dites-nous ce que vous en avez pensé !</p>
             <div>
                 <label class="inputReview" for="userName">Nom d'utilisateur : </label>

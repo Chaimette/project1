@@ -5,13 +5,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelectorAll(".pics").forEach(image => {
         image.addEventListener("click", function() {
+            const nav = document.querySelector("nav");
+            nav.setAttribute("style","visibility: hidden;");
             modal.style.display = "block";
             modalImg.src = this.src;
         });
     });
 
+
     closeBtn.onclick = function() {
         modal.style.display = "none";
+        const nav = document.querySelector("nav");
+            nav.setAttribute("style","visibility: visible;");
     }
 
     window.onclick = function(event) {
