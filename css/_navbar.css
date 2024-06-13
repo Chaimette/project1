@@ -1,0 +1,222 @@
+.Logo
+{
+    width:7rem;
+    aspect-ratio:1;
+}
+.searchBar
+{
+  display: flex;
+  border-radius: 7px;
+  flex-direction: row;
+  background:var(--navSearch);
+  justify-content: space-between;
+  height:3rem;
+  padding: 0.4rem;
+}
+.searchBar input{
+    background-color: var(--navSearch);
+    border:none;
+    width:clamp(10ch, 100vh, 250px);
+    padding:10px;
+    border-radius: 7px;
+    color:var(--text);
+}
+.searchBar input:focus{
+    outline:none;
+}
+.searchBar button{
+    background:none;
+    border:none;
+    outline: none;
+    box-shadow: none;
+    width: 2rem;
+    background:var(--navSearch);
+    font-size:2rem;
+    color:var(--text);
+    border-radius: 7px;
+}
+.searchBar button:active
+{
+    background:none;
+    border:none;
+    outline: none;
+    box-shadow: none;
+    color:var(--bg-widgets);
+}
+.burger-menu
+{
+    width:20vw;
+}
+.menu-wrapper
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+menu>li{
+    font-size: larger;
+    visibility:hidden;    
+    list-style: none;
+}
+menu li a
+{
+    text-decoration: none;
+}
+menu li:hover
+{
+    text-decoration: none;
+    background:var(--text);
+    color:var(--main-color);
+}
+.toggle-menu:hover menu>li
+{
+    visibility: visible;
+    opacity: 1;
+}
+.menu-wrapper h3
+{
+    padding-left:0.5rem;
+}
+.toggle-menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav
+{
+  z-index: 99;
+  background-color: var(--main-color);
+  color: var(--bg-widgets);
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:2rem;
+  position:fixed;
+  width: 100vw;
+}
+
+.toggle-btn
+{
+    width: 0px;
+    visibility:hidden;
+    z-index: 99;
+}
+
+@media screen and (width <= 768px) { 
+    nav{
+        width:100%;
+        position:fixed;
+        z-index: 99;
+        flex-direction: column ;
+    }
+    .Logo
+    {
+        position: fixed;
+        top:0px;
+        left:0px;
+    }
+    .burger-menu
+    {   
+        top: 2rem;
+        visibility: visible;
+        display: block;
+        position: fixed;
+        right:0;
+        transform:translateX(-5rem);
+        width: 100px;
+        height:10px;
+        background:#4B0004;
+        border-radius: 8px;
+        transition: 0.5s;
+    } 
+    .burger-menu::before
+    {   
+        position: relative;
+        display: block;
+        content:"";
+        top:-25px;
+        width:100px;
+        height:10px;
+        background:var(--bg-widgets);
+        border-radius: 8px;
+    }  
+    .burger-menu::after
+    {   
+        position: relative;
+        display: block;
+        content:"";
+        top:15px;
+        width:100px;
+        height:10px;
+        background:var(--bg-widgets);
+        border-radius: 8px;
+    }    
+
+    .toggle-btn:checked ~ .burger-menu:after{
+        top: 0;
+        transform: rotate(-405deg);
+        width: 100px;
+        transition: 0.5s;
+    }
+    .toggle-btn:checked ~ .burger-menu:before{
+        top: 1vh;
+        transform: rotate(405deg);
+        width: 100px;
+        transition: 0.5s;
+    }
+    .toggle-btn:checked ~ .burger-menu{
+        background: transparent;
+    }
+    .toggle-btn:not(:checked) ~ .burger-menu:after{
+        transition: 0.5s;
+    }
+    .toggle-btn:not(:checked) ~ .burger-menu:before{
+        transition: 0.5s;
+    }
+
+    .toggle-btn:checked ~.menu-wrapper 
+    {        
+        visibility: visible;
+        display: flex;
+        flex-direction: column-reverse;
+        width:100vw;
+        padding-top: 7.5rem;
+    }
+    .menu-wrapper menu li
+    {
+        align-items: center;
+        visibility: visible;
+        text-align: center;
+    }
+
+    .toggle-btn:checked ~.menu-wrapper menu li
+    {
+        padding: 0.5rem;
+        font-size: larger;
+        opacity: 1;        
+    }
+    .menu-wrapper
+    {
+        visibility: hidden;
+    }
+
+    .toggle-btn
+    {
+        position: fixed;
+        top:3vw;
+        right:-2vw;
+        width:100px;
+        height:100px;
+        opacity: 0;
+        visibility: visible;
+        transform:translateX(-5rem);        
+    }
+    .menu-wrapper h2
+    {
+        visibility: hidden;   
+    }
+}
