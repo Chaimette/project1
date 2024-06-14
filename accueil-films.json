@@ -28,5 +28,23 @@
         "title": "Fast and Furious 5",
         "poster": "img/films/fandf5.jpg",
         "rating": "7.1"
+    },
+    {
+        "id": 5,
+        "title": "Fast and Furious 15",
+        "poster": "img/films/fandf5.jpg",
+        "rating": "lol"
+    },
+    {
+        "id": 4,
+        "title": "Fast and Furious 27",
+        "poster": "img/films/fandf4.jpg",
+        "rating": "-62"
+    },
+    {
+        "id": 2,
+        "title": "Fast and Furious 39:</br>Retirement Home",
+        "poster": "img/films/fandf39.jpg",
+        "rating": "10"
     }
 ]
