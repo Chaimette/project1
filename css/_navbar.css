@@ -208,12 +208,12 @@ nav
     .menu-wrapper menu li
     {
         align-items: center;
-        visibility: visible;
         text-align: center;
     }
 
     .toggle-btn:checked ~.menu-wrapper menu li
     {
+        visibility: visible;
         padding: 0.5rem;
         font-size: larger;
         opacity: 1;        
