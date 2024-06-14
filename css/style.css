@@ -30,7 +30,7 @@ main{
     align-items: center;
     gap: 2rem;
 }
-h1,h2,h3,.button{
+h1,h2,h3,.button,p{
     font-family: "Montserrat", sans-serif;
 }
 
@@ -41,8 +41,7 @@ h1,h2,h3,.button{
 
 body
 {
-    background:linear-gradient(0deg, #000000 20%, #141414 60%, #C3C3C3);
-    background-repeat:no-repeat;
+    background-color:var(--main-color);
 }
 
 .slider-wrapper
