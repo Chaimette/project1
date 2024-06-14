@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style-page-films.css" />
-    <title>Projet 1</title>
+    <title> <?php include "variables.php"; echo $title1 ?> </title>
   </head>
   <body>
     <?php include "_navbar.php";
           include "variables.php" ?>
     <section class="banner">
       <div class="title-left">
-        <h1 class="banner-title"> <?php echo $title ?> </h1>
-        <p class="sub-title"> <?php echo $originalTitle ?> </p>
-        <p class="sub-title"> <?php echo $movieDetails ?> </p>
+        <h1 class="banner-title"> <?php echo $title1 ?> </h1>
+        <p class="sub-title"> <?php echo "Titre original: $originalTitle1" ?> </p>
+        <p class="sub-title"> <?php echo $movieDetails1 ?> </p>
       </div>
       <div class="title-right">
 
-        <h4 class="h4size"> <?php echo $rating ?> </h4>
+        <h4 class="h4size"> <?php echo $rating1 ?> </h4>
 
         <section class="ratings">
         <form action="process_rating.php" method="post">
@@ -29,7 +31,7 @@
             name="rating"
             required
             minlength="1"
-            maxlength="2"
+            maxlength="3"
             size="4"
             step="0.1"
           />           
@@ -48,35 +50,12 @@
 
       <div class="summary">
         <h3>Synopsis</h3>
-        <p>
-          La nuit tombée, Dominic Toretto règne sur les rues de Los Angeles à la
-          tête d'une équipe de fidèles qui partagent son goût du risque, sa
-          passion de la vitesse et son culte des voitures de sport lancées à
-          plus de 250 km/h dans des rodéos urbains d'une rare violence. Ses
-          journées sont consacrées à bricoler et à relooker des modèles haut de
-          gamme, à les rendre toujours plus performants et plus voyants, à
-          organiser des joutes illicites où de nombreux candidats s'affrontent
-          sans merci sous le regard énamouré de leurs groupies. <span class="more-text"> A la suite de
-          plusieurs attaques de camions, la police de L.A. décide d'enquêter sur
-          le milieu des street racers. Brian, un jeune policier, est chargé
-          d'inflitrer la bande de Toretto, qui figure, avec celle de son rival
-          Johnny Tran, au premier rang des suspects. </span>
-        </p>
+        <p> <?php echo $summary1 ?> </p>
         <button id="show-more-btn">Afficher plus</button>
       </div>
     </section>
     <section class="trailer">
-      <iframe
-        class="video-trailer"
-        width="700"
-        height="420"
-        src="https://www.youtube-nocookie.com/embed/Zcosa9LUaE0?si=zmSqESPOPBRbqWd-"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+      <?php echo $trailer1 ?>
     </section>
     <section class="actors-section">
       <h3>Casting</h3>
@@ -84,7 +63,7 @@
 
       <?php 
         
-        foreach ($actors as $actor) {
+        foreach ($actors1 as $actor) {
           echo "<div class= 'actor'>
             <img class='actor-img' src='{$actor['image']}' alt='{$actor['name']}' />
           <div class='actor-details'>
@@ -94,13 +73,9 @@
         </div>";
         }
       ?>
-
-        
-        
-      
+     
       </div>
     </section>
-
 
     <section class="spec-pictures">
       <h3>Photos</h3>
@@ -114,19 +89,16 @@
       </ul>
     </section>
 
-
     <div id="modal" class="modal">
       <span class="close">&times;</span>
       <img class="modal-content" id="modal-img">
     </div>
 
-
     <section class="user-reviews">
       <h3>Commentaires des utilisateurs</h3>
       <div class="all-reviews">
       <?php
-      
-
+     
       foreach ($reviews as $review) {
         echo "<div class='reviews'><h4>De {$review['username']}</h4><p>{$review['comment']}</p></div>";
       }
@@ -134,7 +106,6 @@
       </div>
     </section>
 
-    
     <section class="leaveReview">
     <form action="process_review.php" method="post">
     <p> Dites-nous ce que vous en avez pensé !</p>

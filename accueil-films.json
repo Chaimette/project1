@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Fast and Furious",
+        "poster": "img/films/fandf1.jpg",
+        "rating": "5.8"
+    },
+    {
+        "id": 2,
+        "title": "Fast and Furious 2",
+        "poster": "img/films/fandf2.jpg",
+        "rating": "7.8"
+    },
+    {
+        "id": 3,
+        "title": "Fast and Furious 3",
+        "poster": "img/films/fandf3.jpg",
+        "rating": "8.4"
+    },
+    {
+        "id": 4,
+        "title": "Fast and Furious 4",
+        "poster": "img/films/fandf4.jpg",
+        "rating": "6.3"
+    },
+    {
+        "id": 5,
+        "title": "Fast and Furious 5",
+        "poster": "img/films/fandf5.jpg",
+        "rating": "7.1"
+    }
+]
