@@ -9,39 +9,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <title>Document</title>
     <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
 </head>
 <body>
     <header>
         <?php include "_navbar.php" ?>
     </header>
     <main>
-        <section class="carousel">
-            <div class="slider-wrapper">
-                <button class="slide-button" id="left">
-                    <svg class="prev">
-                        <use href="icons/sprite.svg#prev" />
-                    </svg>
-
-                </button>
-                <div class="item-list">
-                    <?php foreach ($caroussel as $poster => $video) : ?>
-                        <video muted controls class="image-item video-viewport" src="video/<?= $video ?>" controls type="video/mp4" poster="img/<?= $poster ?>"></video>
-                    <?php endforeach; ?>
-
-                </div>
-                <button class="slide-button" id="right">
-                    <svg class="next">
-                        <use xlink:href="icons/sprite.svg#next" />
-                    </svg>
-                </button>
-            </div>
-            <div class="slider-scrollbar">
-                <div class="scrollbar-track">
-                    <div class="scrollbar-thumb">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php include "_trailder.php" ?>
         <section id="news">
             <h2>Les dernières news</h2>
 
@@ -71,55 +46,53 @@
                     </p>
                 </div>
             </div>
-
         </section>
+            <section id="hall">
+                <div class="fame">
+                    <h2>Hall of Fame</h2>
+                    <?php
+                    $data = prepareNotes($fame);
+                    for ($i = 0; $i < count($data); $i++) : ?>
+                        <?= $data[$i] ?>
 
-        <section id="hall">
-            <div class="fame">
-                <h2>Hall of Fame</h2>
-                <?php
-                $data = prepareNotes($fame);
-                for ($i = 0; $i < count($data); $i++) : ?>
-                    <?= $data[$i] ?>
-
-                <?php endfor; ?>
-            </div>
-            <div class="shame">
-                <h2>Tops navets</h2>
-                <?php
-                $data = prepareNotes($shame);
-                for ($i = 0; $i < count($data); $i++) : ?>
-                    <?= $data[$i] ?>
-
-                <?php endfor; ?>
-            </div>
-        </section>
-        <section id="poster" class="carousel">
-            <div class="slider-wrapper">
-                <button class="slide-button" id="left">
-                    <svg class="prev">
-                        <use href="icons/sprite.svg#prev" />
-                    </svg>
-                </button>
-                <div class="item-list">
-
-                    <?php for ($i = 0; $i < count($affiche); $i++) : ?>
-                        <img src="img/Affiche/<?= $affiche[$i] ?>" alt="poster <?= $i + 1 ?>">
                     <?php endfor; ?>
-
                 </div>
-                <button class="slide-button" id="right">
-                    <svg class="next">
-                        <use xlink:href="icons/sprite.svg#next" />
-                    </svg>
-                </button>
-            </div>
-            <div class="slider-scrollbar">
-                <div class="scrollbar-track">
-                    <div class="scrollbar-thumb">
+                <div class="shame">
+                    <h2>Tops navets</h2>
+                    <?php
+                    $data = prepareNotes($shame);
+                    for ($i = 0; $i < count($data); $i++) : ?>
+                        <?= $data[$i] ?>
+
+                    <?php endfor; ?>
+                </div>
+            </section>
+            <section id="poster" class="carousel">
+                <div class="slider-wrapper">
+                    <button class="slide-button" id="left">
+                        <svg class="prev">
+                            <use href="icons/sprite.svg#prev" />
+                        </svg>
+                    </button>
+                    <div class="item-list">
+
+                        <?php for ($i = 0; $i < count($affiche); $i++) : ?>
+                            <img src="img/Affiche/<?= $affiche[$i] ?>" alt="poster <?= $i + 1 ?>">
+                        <?php endfor; ?>
+
+                    </div>
+                    <button class="slide-button" id="right">
+                        <svg class="next">
+                            <use xlink:href="icons/sprite.svg#next" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb">
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
     <?php include '_footer.php' ?>

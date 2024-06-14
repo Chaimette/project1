@@ -1,13 +1,14 @@
 @import "_navbar.css";
 @import "_variables.css";
 @import "_footer.css";
-
+@import "_trailer.css";
 *
 {
     padding:0;
     margin:0;
     width: 100%;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 } 
 
 html,body
@@ -29,9 +30,6 @@ main{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-}
-h1,h2,h3,.button,p{
-    font-family: "Montserrat", sans-serif;
 }
 
 .carousel
@@ -146,6 +144,7 @@ body
 }
 #news
 {    
+    top: -100vh !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
