@@ -27,15 +27,15 @@ nav {
 
 h1 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-top: 200px;
 }
 
 .film-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-left: 100px;
-    padding-top:150px;
+    padding-left: 50px;
+    padding-top:50px;
     overflow: scroll;
 }
 
